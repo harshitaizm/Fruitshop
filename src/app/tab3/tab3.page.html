@@ -1,17 +1,70 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title class="zero">Discounts & Offers</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-card (click)="showDiscount('Special Discount', 'Get 20% off on Apples')"
+            class="discount-card special">
+    <ion-card-header>
+      <ion-card-title>Special Discount</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Grab amazing deals on premium fruits!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="showDiscount('Seasonal Discount', 'Buy 5kg Mangoes and get 500g free!')"
+            class="discount-card seasonal">
+    <ion-card-header>
+      <ion-card-title>Seasonal Discounts</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Fresh fruits for the season at great prices!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="showDiscount('Common Discount', 'Get 5% off on Bananas & Oranges')"
+            class="discount-card common">
+    <ion-card-header>
+      <ion-card-title>Common Discounts</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Everyday fruits for everyone!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="showDiscount('Bulk Purchase Offer', 'Buy ₹500 or more and get 10% off')"
+            class="discount-card bulk">
+    <ion-card-header>
+      <ion-card-title>Buy More & Save</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Save more when buying in bulk.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="showDiscount('Weekend Offer', 'Special deals this weekend only!')"
+            class="discount-card weekend">
+    <ion-card-header>
+      <ion-card-title>Weekend Offer</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Limited-time weekend discounts!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="showDiscount('Member Exclusive', 'Extra 5% off for members')"
+            class="discount-card member">
+    <ion-card-header>
+      <ion-card-title>@Member Exclusive </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Special perks for our loyal members.
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>

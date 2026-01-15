@@ -1,0 +1,77 @@
+/* Smooth coffee–cream gradient background */
+ion-content {
+  --background: linear-gradient(135deg, #f7e7ce, #e6c89f, #c7a17a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Main login card */
+ion-card {
+  width: 90%;
+  max-width: 380px;
+  border-radius: 18px;
+  background: #fff8f0;
+  box-shadow: 0 10px 25px rgba(99, 67, 33, 0.25);
+  border: 1px solid #d2b48c;
+}
+
+/* Header section */
+ion-card-header {
+  text-align: center;
+  background: linear-gradient(135deg, #6f4e37, #a67b5b);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  color: #fffaf2;
+  padding: 18px;
+  font-weight: bold;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
+}
+
+/* Input and form layout */
+ion-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px;
+}
+
+ion-item {
+  --background: #f3e5ab;
+  border-radius: 12px;
+  --highlight-color-focused: #a67b5b;
+  border: 1px solid #d7b26f;
+}
+
+ion-input {
+  font-size: 16px;
+  color: #4e342e;
+}
+
+/* Login button styling */
+ion-button {
+  margin-top: 15px;
+  --background: linear-gradient(135deg, #8b5e3c, #5d4037);
+  border-radius: 14px;
+  font-weight: bold;
+  color: #fff7e6;
+  letter-spacing: 0.5px;
+  box-shadow: 0 5px 12px rgba(93, 64, 55, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+ion-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(93, 64, 55, 0.5);
+}
+
+/* Subtle footer text */
+.footer-text {
+  text-align: center;
+  color: #6f4e37;
+  font-size: 0.9em;
+  margin-top: 12px;
+  font-style: italic;
+}

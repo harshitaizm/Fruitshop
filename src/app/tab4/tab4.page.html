@@ -1,0 +1,43 @@
+<ion-header translucent>
+  <ion-toolbar color="warning">
+    <ion-title class="zero">My Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list *ngIf="cartItems.length > 0; else emptyCart">
+    <ion-item *ngFor="let item of cartItems">
+      <ion-avatar slot="start">
+        <img [src]="item.image" [alt]="item.name" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ item.name }}</h2>
+        <p>{{ item.desc }}</p>
+        <p>Quantity: {{ item.quantity }} | ₹{{ item.price * item.quantity }}</p>
+      </ion-label>
+      <ion-button color="danger" fill="clear" (click)="removeFromCart(item.name)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #emptyCart>
+    <ion-text color="medium">
+      <p class="empty-cart">Your cart is empty. Add some fruits from the Explore tab!</p>
+    </ion-text>
+  </ng-template>
+
+  <div *ngIf="cartItems.length > 0" class="cart-total">
+    <h3>Total: ₹{{ total }}</h3>
+    <div class="cart-buttons">
+      <ion-button color="danger" (click)="clearCart()">
+        <ion-icon name="trash-outline" slot="start"></ion-icon>
+        Clear Cart
+      </ion-button>
+      <ion-button expand="block" color="success" (click)="checkout()">
+        <ion-icon name="bag-check-outline" slot="start"></ion-icon>
+        Checkout
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

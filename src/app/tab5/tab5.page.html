@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Contact Us </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="contact-container">
+    <h2>We’d love to hear from you!</h2>
+    <p>Fill out the form below to reach Lucky Chand Fruit Shop.</p>
+
+    <ion-item>
+      <ion-label position="floating">Your Name</ion-label>
+      <ion-input [(ngModel)]="contact.name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Your Email</ion-label>
+      <ion-input [(ngModel)]="contact.email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Message</ion-label>
+      <ion-textarea [(ngModel)]="contact.message"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" color="warning" (click)="sendMessage()">Send Message</ion-button>
+
+    <div class="info">
+      <h3>Our Address:</h3>
+      <p>Lucky Fruit Shop, Main Market, Punjab</p>
+
+      <h3>Call Us:</h3>
+      <p>+91 98765 43210</p>
+
+      <h3>📧 Email:</h3>
+      <p>luckychandshop@gmail.com</p>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,17 +1,144 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header translucent>
+  <ion-toolbar color="warning">
+    <ion-title class="zero">Lucky Fruit Shop</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-button >
+        <ion-icon slot="icon-only" name="storefront-outline"></ion-icon>
+      </ion-button></ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openProfile()">
+        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding home-bg">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Fresh. Juicy. Organic.</h1>
+      <p>We bring the taste of nature straight to your table.</p>
+      <ion-button color="warning" shape="round" (click)="goToShop()">Explore Now</ion-button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2 class="h2"> Our Fresh Picks 🍊</h2>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce" alt="Apple" />
+            <ion-card-header>
+              <ion-card-title>Apple</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Sweet and crisp. Perfect for your health.</p>
+              <strong>₹120 / kg</strong>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card>
+            <img src="https://cdn.pixabay.com/photo/2011/03/24/10/12/banana-5734_640.jpg" alt="Banana" />
+            <ion-card-header>
+              <ion-card-title>Banana</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Rich in potassium and soft.</p>
+              <strong>₹60 / dozen</strong>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <img src="https://imgs.search.brave.com/n8FSmoobxutni3zUU_V4s1i530-s69Hg1pglaUYaLfA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM4/NjY0MjI2Ni92ZWN0/b3IvY2l0cnVzLWZy/dWl0LXdpdGgtbW9u/c3Rlci1wbGFudC1w/YXR0ZXJuLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1sbzBW/WHY4QWRhNzFlSElJ/bHZCbHlXNjQyeVpj/MDB1YUt4b2o0SlIt/d1dBPQ" alt="Orange" />
+            <ion-card-header>
+              <ion-card-title>Orange</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Full of vitamin C with a refreshing taste.</p>
+              <strong>₹90 / kg</strong>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-card>
+            <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2" alt="Strawberry" />
+            <ion-card-header>
+              <ion-card-title>Strawberry</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>Juicy, sweet, and naturally red.</p>
+              <strong>₹250 / kg</strong>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <section  class="about">
+    <h2>About Us 🍏</h2>
+    <p>
+      At <b>Lucky Chand Fruit Shop</b>, we believe in providing only the freshest and healthiest fruits.
+      Our fruits are sourced directly from trusted farmers, ensuring quality and nutrition in every bite.
+    </p>
+  </section>
+
+  <section class="reviews">
+    <h2>Customer Reviews <ion-icon name="star"></ion-icon></h2>
+    <div class="review-card">
+      <div class="review-header">
+        <h3>Rajesh Kumar, Punjab</h3>
+        <div class="stars">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+      </div>
+      <p>"Amazing quality fruits! Fresh mangoes from Punjab are the best. Highly recommend!"</p>
+    </div>
+    <div class="review-card">
+      <div class="review-header">
+        <h3>Simran Kaur, Amritsar</h3>
+        <div class="stars">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star-half-outline"></ion-icon>
+        </div>
+      </div>
+      <p>"Love the variety! The apples are crisp and juicy. Great service from Lucky Chand."</p>
+    </div>
+    <div class="review-card">
+      <div class="review-header">
+        <h3>Gurpreet Singh, Ludhiana</h3>
+        <div class="stars">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+      </div>
+      <p>"Best fruit shop in Punjab! Always fresh and affordable. Keep up the good work!"</p>
+    </div>
+  </section>
+
+
+
+
+
 </ion-content>

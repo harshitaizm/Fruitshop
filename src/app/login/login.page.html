@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lucky Chand Fruit Shop </ion-card-title>
+      <ion-card-subtitle>Fresh, Warm & Natural</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Username" [(ngModel)]="username" placeholder="Enter username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Password" type="password" [(ngModel)]="password" placeholder="Enter password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="login()">Login</ion-button>
+
+      <div class="footer-text">Crafted with Love and Freshness by Lucky Chand Shop</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

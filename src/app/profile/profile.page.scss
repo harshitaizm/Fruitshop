@@ -1,0 +1,47 @@
+.toolbar-coffee {
+  --background: linear-gradient(135deg, #6f4e37, #a67b5b);
+  color: #fff;
+}
+
+.profile-content {
+  --background: linear-gradient(135deg, #f7e7ce, #e6c89f);
+}
+
+.profile-card {
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(99, 67, 33, 0.25);
+  text-align: center;
+  background: #fff8f0;
+  border: 1px solid #d2b48c;
+}
+
+.profile-avatar {
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #b58e6c;
+  box-shadow: 0 5px 10px rgba(99, 67, 33, 0.3);
+}
+
+ion-card-title {
+  color: #5d4037;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+ion-card-subtitle {
+  color: #8d6e63;
+}
+
+ion-card-content {
+  color: #4e342e;
+}
+
+.btns ion-button {
+  margin-top: 10px;
+  --background: linear-gradient(135deg, #8b5e3c, #5d4037);
+  --color: #fff7e6;
+  border-radius: 12px;
+}

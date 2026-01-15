@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar class="toolbar-coffee">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Profile</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button color="white" (click)="logout()">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding profile-content">
+  <ion-card class="profile-card">
+    <ion-card-header>
+      <ion-avatar class="profile-avatar">
+        <img src="https://imgs.search.brave.com/QD81H5yANMs3z1xNttyqmooemBRQ509hPpHK3VQOJYU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzU2MDU4OTE0L3Iv/aWwvYmZiMGY0LzY2/OTAyMjIwNjAvaWxf/MzAweDMwMC42Njkw/MjIyMDYwX2NyZDYu/anBn" alt="Profile" />
+      </ion-avatar>
+      <ion-card-title>{{ profile.name }}</ion-card-title>
+      <ion-card-subtitle>@{{ profile.username }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+      <p><strong>Phone:</strong> {{ profile.phone }}</p>
+      <p><strong>Location:</strong> {{ profile.location }}</p>
+      <p><strong>Member Since:</strong> {{ profile.memberSince }}</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3>{{ profile.orders }}</h3>
+            <p>Orders</p>
+          </ion-col>
+          <ion-col>
+            <h3>{{ profile.points }}</h3>
+            <p>Points</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item lines="none">
+        <ion-label>
+          <h2>About</h2>
+          <p>{{ profile.bio }}</p>
+        </ion-label>
+      </ion-item>
+
+      <div class="btns">
+        <ion-button expand="block" (click)="noop()">Edit Profile</ion-button>
+        <ion-button expand="block" fill="outline" (click)="noop()">View Orders</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

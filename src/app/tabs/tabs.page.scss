@@ -1,1 +1,27 @@
+/* This CSS controls the look of the bottom tab bar */
+ion-tab-bar {
+  background-color: #fff3e0; /* light orange background */
+  border-top: 2px solid #ffa726; /* orange border line on top */
+}
+
+/* This changes how each tab button looks */
+ion-tab-button {
+  color: #5d4037; /* brown text and icon color */
+  font-weight: 500; /* makes label slightly bold */
+}
+
+/* When we select a tab, it changes color */
+ion-tab-button.tab-selected {
+  color: #e65100; /* dark orange color for active tab */
+}
+
+/* This changes icon size */
+ion-tab-button ion-icon {
+  font-size: 22px;
+}
+
+/* Label style */
+ion-tab-button ion-label {
+  font-size: 13px;
+}
 

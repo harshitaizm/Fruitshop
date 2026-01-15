@@ -1,0 +1,98 @@
+.notifications-bg {
+  --background: linear-gradient(135deg, #fffde7, #e8f5e9, #f1f8e9);
+  font-family: 'Poppins', sans-serif;
+  background-attachment: fixed;
+}
+
+.zero {
+  text-align: center;
+  font-weight: bold;
+  color: #4e342e;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.notification-list {
+  margin-top: 20px;
+}
+
+.notification-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  transition: all 0.3s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.notification-title {
+  display: flex;
+  align-items: center;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.notification-title ion-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.notification-date {
+  color: #8d6e63;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.notification-message {
+  color: #5d4037;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.no-notifications {
+  text-align: center;
+  padding: 60px 20px;
+  color: #8d6e63;
+}
+
+.no-notifications ion-icon {
+  font-size: 4rem;
+  color: #ffb74d;
+  margin-bottom: 20px;
+}
+
+.no-notifications h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4e342e;
+}
+
+.no-notifications p {
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .notification-card {
+    margin-bottom: 12px;
+  }
+
+  .notification-title {
+    font-size: 1rem;
+  }
+
+  .notification-message {
+    font-size: 0.9rem;
+  }
+}

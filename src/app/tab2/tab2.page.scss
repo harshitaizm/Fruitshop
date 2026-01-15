@@ -1,0 +1,260 @@
+/* Enhanced styling for search bar and improved cards */
+.explore-bg {
+  --background: linear-gradient(135deg, #fffde7, #e8f5e9, #f1f8e9);
+  font-family: 'Poppins', sans-serif;
+  background-attachment: fixed;
+}
+
+.zero {
+  text-align: center;
+  font-weight: bold;
+  color: #4e342e;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin: 20px;
+  border-radius: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.search-bar ion-searchbar {
+  --background: transparent;
+  --border-radius: 25px;
+  --box-shadow: none;
+  --placeholder-color: #8d6e63;
+  --color: #4e342e;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.search-bar ion-searchbar::part(searchbar-input) {
+  background: transparent;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px;
+  padding: 0 10px;
+}
+
+.category-buttons ion-button {
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  min-width: 100px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-buttons ion-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.category-buttons ion-button:hover::before {
+  left: 100%;
+}
+
+.category-buttons ion-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.category-buttons ion-button ion-icon {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+.fruit-card {
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.fruit-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.fruit-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.fruit-card:hover img {
+  transform: scale(1.08);
+}
+
+ion-card-title {
+  color: #2e7d32;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.fruit-card ion-card-content {
+  padding: 15px;
+}
+
+.fruit-card ion-card-content p {
+  color: #5d4037;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.fruit-card ion-card-content strong {
+  color: #f57c00;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.fruit-card ion-button {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.fruit-card ion-button:hover {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+}
+
+/* Grid layout improvements */
+ion-grid {
+  padding: 0 15px;
+}
+
+ion-row {
+  margin-bottom: 15px;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: #8d6e63;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.no-results ion-icon {
+  font-size: 3rem;
+  color: #ffb74d;
+  margin-bottom: 15px;
+}
+
+/* Loading state */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-container ion-spinner {
+  color: #4caf50;
+}
+
+/* Notification button styling */
+.notification-button {
+  position: relative;
+}
+
+.notification-button ion-icon {
+  font-size: 1.5rem;
+}
+
+.notification-button ion-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.7rem;
+  padding: 2px 4px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .search-bar {
+    margin: 15px;
+  }
+
+  .category-buttons {
+    margin: 15px;
+    gap: 8px;
+  }
+
+  .category-buttons ion-button {
+    min-width: 70px;
+    font-size: 0.9rem;
+  }
+
+  .fruit-card img {
+    height: 120px;
+  }
+
+  .notification-button ion-icon {
+    font-size: 1.3rem;
+  }
+
+  .notification-button ion-badge {
+    font-size: 0.6rem;
+    top: -3px;
+    right: -3px;
+    min-width: 14px;
+    height: 14px;
+    border-radius: 7px;
+  }
+}

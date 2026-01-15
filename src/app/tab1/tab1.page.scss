@@ -1,0 +1,287 @@
+/* Enhanced styling with better gradients, shadows, and reviews styling */
+.home-bg {
+  --background: linear-gradient(135deg, #fff8e1, #ffe0b2, #ffcc80);
+  font-family: 'Poppins', sans-serif;
+  background-attachment: fixed;
+}
+
+.zero {
+  text-align: center;
+  font-weight: bold;
+  color: #4e342e;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+ion-button[color="danger"] {
+  background: linear-gradient(135deg, #ff9800, #f57c00);
+  color: white;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+ion-button[color="danger"]:hover {
+  background: linear-gradient(135deg, #f57c00, #e65100);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(245, 124, 0, 0.4);
+}
+
+.h2 {
+  background: linear-gradient(135deg, #ffb74d, #ff9800);
+  border-radius: 50px;
+  padding: 15px 25px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(255, 183, 77, 0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  border: 3px solid #fff3e0;
+}
+
+.hero {
+  font-style: italic;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url("https://imgs.search.brave.com/R6rfHT1448m3K1ptR8dxuYAcgoO-9TDKDbo5_ZtH874/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE0/ODg0NTk3MTY3ODEt/MzFkYjUyNTgyZmU5/P2l4bGliPXJiLTQu/MS4wJml4aWQ9TTN3/eE1qQTNmREI4TUh4/elpXRnlZMmg4TVRK/OGZHWnlkV2wwYzN4/bGJud3dmSHd3Zkh4/OE1BPT0mZm09anBn/JnE9NjAmdz0zMDAw") center/cover no-repeat;
+  border-radius: 25px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 152, 0, 0.1), rgba(245, 124, 0, 0.1));
+  border-radius: 25px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-weight: 300;
+}
+
+.hero ion-button {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+  transition: all 0.3s ease;
+}
+
+.hero ion-button:hover {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.5);
+}
+
+.products {
+  margin-top: 40px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.products h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+ion-card {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  margin-bottom: 15px;
+}
+
+ion-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+ion-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+ion-card:hover img {
+  transform: scale(1.05);
+}
+
+ion-card-title {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+ion-card-content p {
+  color: #5d4037;
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+ion-card-content strong {
+  color: #f57c00;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  margin-top: 8px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.about {
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  margin: 30px 20px;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  border: 2px solid rgba(255, 193, 7, 0.3);
+}
+
+.about h2 {
+  color: #e65100;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.about p {
+  color: #4e342e;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.about b {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.reviews {
+  padding: 25px;
+  text-align: center;
+  background: linear-gradient(135deg, #fffde7, #f1f8e9, #e8f5e8);
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 193, 7, 0.2);
+}
+
+.reviews h2 {
+  color: #f57c00;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.review-card {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-header h3 {
+  color: #2e7d32;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.stars {
+  color: #ffb300;
+  display: flex;
+  gap: 2px;
+}
+
+.stars ion-icon {
+  font-size: 1.3rem;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+}
+
+.review-card p {
+  color: #5d4037;
+  font-style: italic;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .h2 {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

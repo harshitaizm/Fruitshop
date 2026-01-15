@@ -1,0 +1,31 @@
+<ion-header translucent>
+  <ion-toolbar color="warning">
+    <ion-title class="zero">Notifications</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding notifications-bg">
+  <div class="notification-list">
+    <ion-card *ngFor="let notification of notifications" class="notification-card">
+      <ion-card-header>
+        <ion-card-title class="notification-title">
+          <ion-icon [name]="notification.icon" [color]="notification.color" slot="start"></ion-icon>
+          {{ notification.title }}
+        </ion-card-title>
+        <ion-card-subtitle class="notification-date">{{ notification.date }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="notification-message">{{ notification.message }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="no-notifications" *ngIf="notifications.length === 0">
+    <ion-icon name="notifications-off-outline" color="medium"></ion-icon>
+    <h3>No notifications yet</h3>
+    <p>We'll notify you when we have updates!</p>
+  </div>
+</ion-content>
