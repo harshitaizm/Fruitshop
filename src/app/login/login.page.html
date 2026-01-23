@@ -1,22 +1,41 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Lucky Chand Fruit Shop </ion-card-title>
-      <ion-card-subtitle>Fresh, Warm & Natural</ion-card-subtitle>
-    </ion-card-header>
+<ion-content class="login-bg" fullscreen>
+  <div class="login-wrapper">
 
-    <ion-card-content>
-      <ion-item>
-        <ion-input label="Username" [(ngModel)]="username" placeholder="Enter username"></ion-input>
-      </ion-item>
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title>Lucky Chand Fruit Shop</ion-card-title>
+        <ion-card-subtitle>Fresh • Warm • Natural</ion-card-subtitle>
+      </ion-card-header>
 
-      <ion-item>
-        <ion-input label="Password" type="password" [(ngModel)]="password" placeholder="Enter password"></ion-input>
-      </ion-item>
+      <ion-card-content>
 
-      <ion-button expand="block" (click)="login()">Login</ion-button>
+        <ion-item lines="none" class="input-item">
+          <ion-label position="floating">Username</ion-label>
+          <ion-input
+            [(ngModel)]="username"
+            placeholder="Enter username">
+          </ion-input>
+        </ion-item>
 
-      <div class="footer-text">Crafted with Love and Freshness by Lucky Chand Shop</div>
-    </ion-card-content>
-  </ion-card>
+        <ion-item lines="none" class="input-item">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input
+            type="password"
+            [(ngModel)]="password"
+            placeholder="Enter password">
+          </ion-input>
+        </ion-item>
+
+        <ion-button expand="block" class="login-btn" (click)="login()">
+          Login
+        </ion-button>
+
+        <p class="footer-text">
+          Crafted with love & freshness 🍎
+        </p>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 </ion-content>

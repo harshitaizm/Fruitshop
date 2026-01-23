@@ -1,77 +1,82 @@
-/* Smooth coffee–cream gradient background */
-ion-content {
+/* Background */
+.login-bg {
   --background: linear-gradient(135deg, #f7e7ce, #e6c89f, #c7a17a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
-/* Main login card */
-ion-card {
-  width: 90%;
+/* Center wrapper */
+.login-wrapper {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
   max-width: 380px;
-  border-radius: 18px;
+  border-radius: 20px;
   background: #fff8f0;
-  box-shadow: 0 10px 25px rgba(99, 67, 33, 0.25);
+  box-shadow: 0 12px 30px rgba(99, 67, 33, 0.25);
   border: 1px solid #d2b48c;
 }
 
-/* Header section */
+/* Header */
 ion-card-header {
   text-align: center;
   background: linear-gradient(135deg, #6f4e37, #a67b5b);
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  border-radius: 20px 20px 0 0;
   color: #fffaf2;
-  padding: 18px;
-  font-weight: bold;
-  font-size: 1.4em;
-  letter-spacing: 0.5px;
+  padding: 20px;
 }
 
-/* Input and form layout */
-ion-card-content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 22px;
+ion-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-ion-item {
+ion-card-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Inputs */
+.input-item {
   --background: #f3e5ab;
   border-radius: 12px;
-  --highlight-color-focused: #a67b5b;
+  margin-bottom: 16px;
   border: 1px solid #d7b26f;
 }
 
+ion-label {
+  color: #6f4e37;
+  font-weight: 500;
+}
+
 ion-input {
-  font-size: 16px;
   color: #4e342e;
 }
 
-/* Login button styling */
-ion-button {
-  margin-top: 15px;
+/* Button */
+.login-btn {
+  margin-top: 20px;
   --background: linear-gradient(135deg, #8b5e3c, #5d4037);
-  border-radius: 14px;
+  border-radius: 16px;
   font-weight: bold;
-  color: #fff7e6;
-  letter-spacing: 0.5px;
-  box-shadow: 0 5px 12px rgba(93, 64, 55, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  letter-spacing: 0.6px;
+  box-shadow: 0 6px 14px rgba(93, 64, 55, 0.45);
 }
 
-ion-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(93, 64, 55, 0.5);
+.login-btn:active {
+  transform: scale(0.97);
 }
 
-/* Subtle footer text */
+/* Footer */
 .footer-text {
+  margin-top: 16px;
   text-align: center;
+  font-size: 0.85rem;
   color: #6f4e37;
-  font-size: 0.9em;
-  margin-top: 12px;
   font-style: italic;
 }
